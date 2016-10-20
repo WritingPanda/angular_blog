@@ -14,7 +14,6 @@ angular.module('blogList').
 
             $scope.items = blogItems;
 
-            console.log("hello");
             $scope.title = "Hi there";
             $scope.clicks = 0;
             $scope.someClickTest = function () {
