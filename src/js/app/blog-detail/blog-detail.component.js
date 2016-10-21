@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('blogList').
-    component('blogList', {
-        templateUrl: '/templates/blog-list.html',
+angular.module('blogDetail').
+    component('blogDetail', {
+        templateUrl: '/templates/blog-detail.html',
         controller: function($routeParams, $scope) {
 
             var blogItems = [
@@ -12,14 +12,6 @@ angular.module('blogList').
                 {title: "Plethora of titles", id: 4, description: "This has always been a book"}
             ];
 
-            $scope.items = blogItems;
-
-            $scope.title = "Hi there";
-            $scope.clicks = 0;
-            $scope.someClickTest = function () {
-                console.log("Clicked!");
-                $scope.clicks += 1;
-                $scope.title = "Clicked " + $scope.clicks + " times.";
-            }
+            $scope.title = "Blog " + $routeParams.id;
         }
-    });
+});
